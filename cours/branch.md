@@ -218,3 +218,139 @@ Check answers
 Remember: Branches allow you to develop different features independently without disturbing the main branch.
 
 Next concept: Git Branch Merging (`git merge`).
+
+
+# Git Branch & Merge — Command Summary
+
+## 1. Branch Management
+
+```
+# List local branches
+git branch
+
+# List local and remote branches
+git branch -a
+
+# Create a new branch
+git branch feature-login
+
+# Create and switch to a new branch
+git switch -c feature-login
+
+# Switch to an existing branch
+git switch feature-login
+
+# Switch to main
+git switch main
+
+# Rename current branch
+git branch -m new-name
+
+# Delete a merged branch
+git branch -d feature-login
+
+# Force delete a branch
+git branch -D feature-login
+
+# Show current branch
+git branch --show-current
+```
+
+## 2. Branch Integration (Merge)
+
+```
+# Switch to the destination branch
+git switch main
+
+# Merge feature branch into main
+git merge feature-login
+
+# Merge without fast-forward (force merge commit)
+git merge --no-ff feature-login
+
+# Abort an unfinished merge
+git merge --abort
+
+# Check merge status
+git status
+
+# Display branch history graph
+git log --oneline --graph --all
+```
+
+## 3. Merge Conflict Resolution
+
+```
+# Check conflicting files
+git status
+
+# Edit conflicting files manually
+
+# Stage resolved files
+git add file.java
+
+# Complete merge
+git commit
+
+# Abort merge if necessary
+git merge --abort
+```
+
+## 4. Complete Workflow Example
+
+```
+# 1. Create feature branch
+git switch -c feature-login
+
+# 2. Modify files
+
+# 3. Stage changes
+git add .
+
+# 4. Commit changes
+git commit -m "Add login feature"
+
+# 5. Return to main
+git switch main
+
+# 6. Merge feature branch
+git merge feature-login
+
+# 7. Verify history
+git log --oneline --graph --all
+
+# 8. Delete feature branch
+git branch -d feature-login
+```
+
+## 5. Most Important Commands for the Exam
+
+| Command                           | Purpose           |
+| --------------------------------- | ----------------- |
+| `git branch`                      | List branches     |
+| `git branch name`                 | Create branch     |
+| `git switch name`                 | Switch branch     |
+| `git switch -c name`              | Create and switch |
+| `git branch -d name`              | Delete branch     |
+| `git merge name`                  | Merge branch      |
+| `git merge --abort`               | Cancel merge      |
+| `git status`                      | Check conflicts   |
+| `git log --oneline --graph --all` | Visualize history |
+
+Remember the workflow:
+
+Create
+
+git switch -c feature
+
+Develop
+
+git add . → git commit
+
+Return
+
+git switch main
+
+Integrate
+
+git merge feature

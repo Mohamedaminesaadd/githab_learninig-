@@ -1,0 +1,14 @@
+# Compiled Java files
+*.class
+
+# Maven build directory
+target/
+
+# IntelliJ IDEA
+.idea/
+
+# Logs
+*.log
+
+# Environment files
+.env

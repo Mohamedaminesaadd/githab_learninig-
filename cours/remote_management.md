@@ -117,3 +117,6 @@ Ma recommandation : utilise SSH sur Ubuntu pour tes projets GitHub.
 - HTTPS → Username + Personal Access Token.
 - SSH → Clé privée sur ton ordinateur + clé publique sur GitHub.
 - La clé privée ne doit jamais être envoyée à GitHub.
+
+
+-----------------------------------------------------

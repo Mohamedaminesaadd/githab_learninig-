@@ -7,8 +7,7 @@ Git records commits, authors, dates, and commit messages. By investigating this 
 - Who modified the code?
 - When was a modification made?
 - What files were changed?
-- Why was a change introduced?
-- What was the previous version of a file?
+- Why was a change introduced and What was the previous version of a file?
 
 ## 1. The `git log` command
 
